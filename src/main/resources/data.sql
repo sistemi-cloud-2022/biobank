@@ -17,10 +17,10 @@ VALUES
 	(1,'Room 1',NULL,NULL,NULL),
 	(2,'Room 2',NULL,NULL,NULL);
 
-/*INSERT INTO `opts` (`id`, `name`, `value`)
-VALUES
-	(1,'biobank_director','BIOBANK DIRECTOR');
-*/
+-- INSERT INTO `opts` (`id`, `name`, `value`)
+-- VALUES
+-- 	(1,'biobank_director','BIOBANK DIRECTOR');
+
 INSERT INTO `freezers` (`id`, `room_id`, `name`, `parent_id`, `created_at`, `updated_at`, `deleted_at`)
 VALUES
 	(1,1,'Freezer 1', NULL, NULL, NULL, NULL),

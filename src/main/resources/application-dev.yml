@@ -1,0 +1,27 @@
+keycloak:
+  realm: Biobank
+  auth-server-url: http://localhost:8180/auth
+  resource: biobank
+  bearer-only: true
+  ssl-required: none 
+  principal-attribute: subject
+  use-resource-role-mappings: true
+
+  securityConstraints:
+    - authRoles: [role-biobank]
+      securityCollections:
+        - name: Biobank private API's
+          patterns: ['/biobank/*']
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+  datasource:
+      url: jdbc:mysql://localhost:3306/biobank?allowPublicKeyRetrieval=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+      username: root
+      password: administrator
+      initialization-mode: always
+
+server:
+  port: 9093

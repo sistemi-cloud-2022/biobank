@@ -1,0 +1,22 @@
+version: '3.3'
+
+services:
+  biobankService:
+    depends_on:
+      - biobank_db
+    image: biobank:latest
+    restart: unless-stopped
+    ports:
+      - 9093:9093
+    environment:
+      SERVER_PORT: 9093
+      MYSQL_HOST: biobank_db
+
+  biobank_db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: biobank_db
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
