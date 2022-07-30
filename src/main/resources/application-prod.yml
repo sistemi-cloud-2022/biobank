@@ -1,6 +1,6 @@
 keycloak:
   realm: Biobank
-  auth-server-url: http://host.docker.internal:8180/auth
+  auth-server-url: http://${KEYCLOAK_HOST}:8180/auth
   resource: biobank
   bearer-only: true
   ssl-required: none 
