@@ -1,4 +1,4 @@
-FROM openjdk:11 
+FROM openjdk:11-slim
 WORKDIR /app
 COPY target/biobank-0.0.1-SNAPSHOT.jar /app
 ENV SERVER_PORT 5000
