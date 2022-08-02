@@ -16,7 +16,7 @@ keycloak:
 spring:
   jpa:
     hibernate:
-      ddl-auto: create
+      generate-ddl: false
   datasource:
       url: jdbc:mysql://${MYSQL_HOST}:3306/biobank_db?allowPublicKeyRetrieval=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
       username: admin
